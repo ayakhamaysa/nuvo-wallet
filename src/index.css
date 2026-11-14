@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+/* Colors and fonts. Change them here and they change everywhere */
+@theme {
+  --color-paper: #f2f3ef; /* page background */
+  --color-ink: #111413; /* main text */
+  --color-muted: #646b67; /* soft text */
+  --color-line: #dcdfda; /* thin borders */
+  --color-mint: #7ef0c2; /* bright brand color */
+  --color-emerald: #0f7b5f; /* deep brand color */
+  --font-display: "Manrope", "IBM Plex Sans Arabic", sans-serif;
+  --font-sans: "Manrope", "IBM Plex Sans Arabic", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  @apply bg-paper text-ink font-sans antialiased;
+}
+:root[lang="ar"] body,
+:root[lang="ar"] .font-display {
+  font-family: "IBM Plex Sans Arabic", "Manrope", sans-serif;
+}
+h1,
+h2 {
+  text-wrap: balance;
+}
